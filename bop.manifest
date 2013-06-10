@@ -1,0 +1,8 @@
+CACHE MANIFEST
+
+/
+/favicon.ico
+/static/{{version}}/style.css
+/static/{{version}}/client.js
+/static/{{version}}/background.png
+/static/{{version}}/image.png

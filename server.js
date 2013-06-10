@@ -5,10 +5,7 @@ var browserify = require('browserify-middleware')
 var express = require('express')
 var app = express()
 
-var lsVersion = require('./package.json').dependencies['lexical-scope']
 var version = require('./package.json').version
-
-browserify.settings('transform', ['rfileify'])
 
 app.use(express.logger('dev'))
 app.use(express.favicon('./favicon.ico'))
@@ -16,6 +13,12 @@ app.use(express.favicon('./favicon.ico'))
 app.get('/', function (req, res) {
   res.type('html')
   var html = fs.readFileSync(__dirname + '/index.html', 'utf8')
+  html = html.replace(/{{version}}/g, version)
+  res.send(html)
+})
+app.get('/bop.manifest', function (req, res) {
+  res.type('text/manifest')
+  var html = fs.readFileSync(__dirname + '/bop.manifest', 'utf8')
   html = html.replace(/{{version}}/g, version)
   res.send(html)
 })
@@ -27,6 +30,7 @@ app.get('/static/' + version + '/style.css', function (req, res) {
 })
 app.get('/static/' + version + '/client.js', browserify('./client.js'))
 app.get('/static/' + version + '/background.png', file('./background.png'))
+app.get('/static/' + version + '/image.png', file('./image.png'))
 
 function file(path) {
   return function (req, res, next) {

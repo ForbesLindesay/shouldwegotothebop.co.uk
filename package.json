@@ -1,6 +1,6 @@
 {
   "name": "shouldwegotothebop.co.uk",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "private": true,
   "dependencies": {
     "browserify-middleware": "~1.10.0",
@@ -11,6 +11,7 @@
     "mandate": "~0.1.0"
   },
   "scripts": {
-    "build": "stop"
+    "build": "stop",
+    "deploy": "mandate"
   }
 }

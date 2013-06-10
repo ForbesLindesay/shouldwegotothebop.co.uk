@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html manifest="/bop.manifest">
   <head>
     <meta charset="utf8"/>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <title>Bop?</title>
     <link href="/static/{{version}}/style.css" rel="stylesheet"/>
+    <link href="/bop.manifest" rel="manifest"/>
+    <link rel="apple-touch-icon" href="/static/{{version}}/image.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- for `stop` we must add background.png as an href -->
     <meta name="background-image" href="/static/{{version}}/background.png"/>
   </head>
@@ -15,7 +19,9 @@
     </div>
     <div id="slide2" style="display: none;">
       <h1>GO TO THE BOP</h1>
+      <img style="display:block; margin: 0 auto;" src="/static/{{version}}/image.png"/>
       <p>Thanks for watching.  This website is run by <a href="http://www.forbeslindesay.co.uk">@ForbesLindesay</a></p>
+      <p style="font-size: 1em">Icon by miniartx from <a href="http://www.iconarchive.com/show/drinks-icons-by-miniartx/Cocktail-Purple-Passion-icon.html">Icon Archive</a> CC Attribution-Noncommercial-No Derivate 3.0</p>
     </div>
     <script src="/static/{{version}}/client.js"></script>
   </body>
