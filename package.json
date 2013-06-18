@@ -1,9 +1,8 @@
 {
   "name": "shouldwegotothebop.co.uk",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "private": true,
   "dependencies": {
-    "browserify-middleware": "~1.10.0",
     "express": "~3.2.5"
   },
   "devDependencies": {
