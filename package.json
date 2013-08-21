@@ -12,5 +12,9 @@
   "scripts": {
     "build": "stop",
     "deploy": "mandate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ForbesLindesay/shouldwegotothebop.co.uk.git"
   }
 }
